@@ -1,15 +1,15 @@
 {
     "uat": {
         "defaultEndPoint": "https://uat.reqres.in/",
-        "ifiId": "1"
+        "id": "1"
     },
     "preprod": {
         "defaultEndPoint": "https://preprod.reqres.in/",
-        "ifiId": "2"
+        "id": "2"
     },
     "prod": {
         "defaultEndPoint": "https://reqres.in/",
-        "ifiId": "3"
+        "id": "3"
     },
     "testingEndPoint": {
         "env": "prod"

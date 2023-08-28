@@ -9,9 +9,9 @@ logger.setLevel(logging.INFO)
 def pytest_addoption(parser):
     parser.addoption("--host", action="store", default="lzuat")
 
-@pytest.hookimpl()
-def pytest_configure(config):
-    update_env(config)
+# @pytest.hookimpl()
+# def pytest_configure(config):
+#     update_env(config)
 
 def read_host_from_config_json(env, host_name):
     with open("config/endpoints_config.json") as json_file:

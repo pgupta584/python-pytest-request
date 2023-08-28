@@ -1,7 +1,8 @@
 import json
 import logging
-from pytest import fixture
+
 import pytest
+from pytest import fixture
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
@@ -9,9 +10,9 @@ logger.setLevel(logging.INFO)
 def pytest_addoption(parser):
     parser.addoption("--host", action="store", default="lzuat")
 
-# @pytest.hookimpl()
-# def pytest_configure(config):
-#     update_env(config)
+@pytest.hookimpl()
+def pytest_configure(config):
+    update_env(config)
 
 def read_host_from_config_json(env, host_name):
     with open("config/endpoints_config.json") as json_file:
@@ -25,13 +26,12 @@ def read_host_from_config_json(env, host_name):
 
 def update_env(config):
     with open("config/endpoints_config.json", "r+") as jsonFile:
-        logger.info(" $$$ ------ Updating Env & COA ----$$$ ")
+        logger.info(" $$$ ------ Updating Env ----$$$ ")
         data = json.load(jsonFile)
         jsonFile.truncate(0)
         jsonFile.seek(0)
         logger.info("--- Truncating file & Updating Host & COA---")
         data["testingEndPoint"]['env'] = config.getoption("--host").lower()
-        data["testingEndPoint"]['coa'] = config.getoption("--coa").lower()
         json.dump(data, jsonFile, indent=4)
         jsonFile.close()
 

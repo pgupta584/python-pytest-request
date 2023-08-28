@@ -1,4 +1,5 @@
 import logging
+
 import curlify
 import pytest
 import requests

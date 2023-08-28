@@ -1,15 +1,28 @@
 import requests
+from pytest import mark
 
+from config.api_config import ApiURLs
 from utils.common_utils import CommonUtils
+from utils.framework_utils import FrameworkUtils
 from utils.json_compare import json_compare_schema
 
 
 class TestGetAPI:
 
     # Generic Request we can make Any HTTP method Api calls
-    @staticmethod
-    def test_get_api_read():
-        response = requests.get("https://reqres.in/api/users?page=2")
+    @mark.jsonTest
+    def test_get_api_read(self):
+        header = {"content-type": "application/json"}
+        print("header", header)
+        url = ApiURLs.get_user_info(2)
+        print("url", url)
+        response = FrameworkUtils.check_status_code_with_custom_header(endPoint=url,
+                                             requestMethod="GET",
+                                             headers=header,
+                                             params=None,
+                                             expectedStatusCode=requests.codes.ok,
+                                             jsonPayload=None)
+
         print("Response --> ", response.json())
         # Verify Json Schema
         json_compare_schema(actual=response.json(),

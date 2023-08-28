@@ -1,8 +1,8 @@
+from test.functional_param import FunctionalParam
 
 class ApiURLs:
-    pass
-    # @staticmethod
-    # def get_user_info(id):
-    #     return FunctionalParam.get_default_end_point() + f'/user/{FunctionalParam.get_ifi_id()}/user/2'
-    #
-    # CREATE_USER = FunctionalParam.get_default_end_point() + '/user/2'
+    @staticmethod
+    def get_user_info(user_id):
+        return FunctionalParam.get_default_end_point() + f'api/users?page={user_id}'
+
+    CREATE_USER = FunctionalParam.get_default_end_point() + '/user/2'

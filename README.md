@@ -10,3 +10,6 @@ pip install requests
 - By default, request library will be available in python
 - Free website to learn API Automation
 https://reqres.in/
+
+# Run Using pytest in multiple environment
+pytest -s -m "jsonTest" --host=lzuat --disable-pytest-warnings

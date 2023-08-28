@@ -1,10 +1,10 @@
 {
     "uat": {
-        "defaultEndPoint": "https://uat.reqres.in/",
+        "defaultEndPoint": "https://reqres/uat.in/",
         "id": "1"
     },
     "preprod": {
-        "defaultEndPoint": "https://preprod.reqres.in/",
+        "defaultEndPoint": "https://reqres/preprod.in/",
         "id": "2"
     },
     "prod": {

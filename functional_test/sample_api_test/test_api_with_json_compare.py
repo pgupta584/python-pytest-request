@@ -9,7 +9,7 @@ class TestGetAPI:
 
     # Generic Request we can make Any HTTP method Api calls
     @staticmethod
-    @mark.jsonTest
+    @mark.jsonCompareTest
     def test_get_api_read():
         response = requests.get("https://reqres.in/api/users?page=2")
         print("Response --> ", response.json())

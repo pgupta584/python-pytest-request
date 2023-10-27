@@ -9,7 +9,7 @@ class TestUserCreation:
         request_body = {
             "name": "Pankaj G",
             "gender": "male",
-            "email": "pankajtest113@15ce.com",
+            "email": "pankajtesrrrt47711360@1555ce.com",
             "status": "active"
         }
         req = requests.request(method='POST',

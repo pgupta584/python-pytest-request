@@ -12,4 +12,4 @@ pip install requests
 https://reqres.in/
 
 # Run Using pytest in multiple environment
-pytest -s -m "jsonTest" --host=lzuat --disable-pytest-warnings
+pytest -s -m "jsonTest" --host=prod --disable-pytest-warnings

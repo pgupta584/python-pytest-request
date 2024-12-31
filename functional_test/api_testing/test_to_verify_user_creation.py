@@ -1,5 +1,5 @@
 import requests
-
+import random
 
 class TestUserCreation:
     @staticmethod
@@ -9,7 +9,7 @@ class TestUserCreation:
         request_body = {
             "name": "Pankaj G",
             "gender": "male",
-            "email": "pankajtesrrrt47711360@1555ce.com",
+            "email": f"pankajte1130960@1555ce.com",
             "status": "active"
         }
         req = requests.request(method='POST',

@@ -13,3 +13,6 @@ https://reqres.in/
 
 # Run Using pytest in multiple environment
 pytest -s -m "jsonTest" --host=prod --disable-pytest-warnings
+
+# Run All Tests
+pytest -s --host=prod --disable-pytest-warnings

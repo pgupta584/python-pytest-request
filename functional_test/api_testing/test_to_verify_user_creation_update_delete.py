@@ -1,4 +1,5 @@
 import requests
+import random
 
 
 class TestUserCreation:
@@ -6,10 +7,11 @@ class TestUserCreation:
     def test_get_basic_api_2():
         header = {"Authorization": "Bearer 37838a5836d84104e99491b431ead98ea4a725b7efbf4129d2614e9bab3663c8",
                   "Content-Type": "application/json"}
+        random_number = random.randint(0, 1000)
         request_body = {
             "name": "Pankaj G",
             "gender": "male",
-            "email": "pankajtest114@15ce.com",
+            "email": f"pankajte{random_number}@15ce.com",
             "status": "active"
         }
         req = requests.request(method='POST',

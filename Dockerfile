@@ -13,4 +13,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 
 # Run pytest when the container starts
-CMD ["pytest", "-s", "--host=prod", "--disable-pytest-warnings"]
+#CMD ["pytest", "-s", "--host=prod", "--disable-pytest-warnings"]
+CMD ["pytest", "-s", "--host=prod", "--disable-pytest-warnings", "--html=report.html"]

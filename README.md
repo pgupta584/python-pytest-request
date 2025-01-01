@@ -11,8 +11,22 @@ pip install requests
 - Free website to learn API Automation
 https://reqres.in/
 
+# Create and activate a virtual environment
+python3 -m venv myenv
+source myenv/bin/activate
+# Install dependencies
+pip install -r requirements.txt
+# deactivate
+deactivate
+
 # Run Using pytest in multiple environment
 pytest -s -m "jsonTest" --host=prod --disable-pytest-warnings
 
 # Run All Tests
 pytest -s --host=prod --disable-pytest-warnings
+
+# with html report
+pytest -s --host=prod --disable-pytest-warnings --html=report.html
+
+# Run With markers
+pytest -s -m "jsonCompareTest" --host=prod --disable-pytest-warnings --html=report.html

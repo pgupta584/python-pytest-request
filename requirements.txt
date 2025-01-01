@@ -1,3 +1,4 @@
 requests
 pytest
 curlify
+pytest-html

@@ -27,7 +27,7 @@ class TestGetAPI:
         print("Response --> ", response.json())
         # Verify Json Schema
         json_compare_schema(actual=response.json(),
-                            expected="python-pytest-request/requests_responses/Responses/reqres/user_res.json")
+                            expected="requests_responses/Responses/reqres/user_res.json")
         # # Reading JSON Object - use Json formatter to read manually & understand
         # # Read Total Page & Email
         # total_page = response.json()['total_pages']
@@ -57,7 +57,7 @@ class TestGetAPI:
         print("Response --> ", response.json())
         # Verify Json Schema
         json_compare_schema(actual=response.json(),
-                            expected="python-pytest-request/requests_responses/Responses/reqres/user_res.json")
+                            expected="requests_responses/Responses/reqres/user_res.json")
         # # Reading JSON Object - use Json formatter to read manually & understand
         # # Read Total Page & Email
         # total_page = response.json()['total_pages']
